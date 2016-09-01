@@ -191,7 +191,7 @@ export function mixin(Base, ...mixins) {
  * @returns {Boolean}
  */
 export function isObjectEquals(object1, object2) {
-  return JSON.stringify(object1) === JSON.stringify(object2);
+  return JSON.stringify(Object.keys(object1).sort()) === JSON.stringify(Object.keys(object2).sort());
 }
 
 /**
